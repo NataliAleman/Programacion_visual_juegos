@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>¿Quieres ser mi novia?</title> 
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!--Jquery biblioteca para manejar eventos, animaciones etc.-->
+    <script>
+        $(document).ready(function(){ //Cuando la página esté cargada, se ejecutará el código que sigue.
+            $('.p1').hover(function(){ //Cuando el mouse pase por encima del elemento con la clase p1, se ejecutará el código que sigue.
+                arriba = Math.random()*(300-1) +1; // Genera un numero aleatorio entre 1 y 400
+                abajo = Math.random() * (700-1) +1; // Genera un numero aleatorio entre 1 y 609
+              $(this).css('top', arriba); // Le asigna la posicion aleatoria a la imagen
+              $(this).css('left', abajo); // Le asigna la posicion aleatoria a la imagen
+            });
+        });
+    function dijoSi(){ //Función que se ejecuta cuando se presiona el botón "Si"
+        document.getElementById('si').style.display = 'block'; //Muestra el elemento con el id "si"
+    }
+    </script>
+</head>
+<body>
+    <div class="contenedor"> <!-- Contenedor principal -->
+        <div class="titulo"> <!-- Titulo -->
+            <FONT FACE="raro, courier" SIZE=6 COLOR="red">
+                ¿Quieres ser mi novia preciosa?</FONT>
+        </div>
+        <div class="opciones"> <!-- Opciones -->
+            <p class="p1">No</p> <!-- Opción 1 -->
+            <p onclick="dijoSi()" class="p2">Si</p> <!-- Opción 2 -->
+            <div id="si"> <!-- Si -->
+                <FONT FACE="impact" SIZE=6 COLOR="green">
+                    Me haces el hombre más feliz, preciosa ♥ </FONT>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
